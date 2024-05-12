@@ -1,3 +1,18 @@
+
+# BilHub Carshowcase Application
+desc <>
+## Visual Overview:
+< passssste in link>
+## Tech Stack:
+* Next.js
+* TypeScript
+* Tailwind CSS
+
+## Features:
+
+## Quick Start
+Follow these steps to set up the project locally on your machine.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
