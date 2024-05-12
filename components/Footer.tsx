@@ -18,15 +18,15 @@ const Footer = () => {
 
                 <div className='footer__links'>
                     {footerLinks.map((item) => (
-                        <div key={item.title} className='footer__links'>
+                        <div key={item.title} className='footer__link'>
                             <h3 className='font-bold'>{item.title}</h3>
                             {item.links.map((link) => (
                                 <Link
+                                    key={link.title}
                                     href={link.url}
-                                    key={item.title}
                                     className='text-gray-500'
                                 >
-                                    {item.title}
+                                    {link.title}
                                 </Link>
                             ))}
                         </div>
@@ -35,13 +35,15 @@ const Footer = () => {
             </div>
 
             <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10'>
-                <p>@2024 BilHub Alla rättigheter reserverad</p>
+                <p>@2024 BilHub.  Alla rättigheter reserverad</p>
+
                 <div className='footer__copyrigths-link'>
                     <Link
                         href="/"
                         className='text-gray-500'>
-                        Privacy Policy
+                        Privacy & Policy
                     </Link>
+                    {'\t'} {/* Add a space */}
                     <Link
                         href="/"
                         className='text-gray-500'>
