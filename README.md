@@ -2,7 +2,8 @@
 # BilHub Carshowcase Application
 desc <>
 ## Visual Overview:
-< passssste in link>
+![bilhub](https://github.com/hihassan1998/car_showcase/assets/150392365/41acfca6-785b-4d66-8543-424c8053a22b)
+
 ## Tech Stack:
 * Next.js
 * TypeScript
