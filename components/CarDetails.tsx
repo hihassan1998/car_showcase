@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Fragment } from 'react';
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import engToSwe from '@/mappingSwe/mapSwe';
+import { generateCarImageUrl } from '@/utils';
 
 const keyInSwedish = (key: string): string => {
     // Check if there's a corresponding Swedish translation for the English key
@@ -75,7 +76,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                     <div className='flex-1 flex flex-col gap-2'>
                                         <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                                             <Image
-                                                src="/hero.png"
+                                                src={generateCarImageUrl(car, '01')}
                                                 alt='car model'
                                                 fill priority
                                                 className='object-contain'
@@ -85,7 +86,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                         <div className='flex gap-3'>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, '29')}
                                                     alt='car model'
                                                     fill priority
                                                     className='object-contain'
@@ -93,7 +94,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, '33')}
                                                     alt='car model'
                                                     fill priority
                                                     className='object-contain'
@@ -101,7 +102,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, '13')}
                                                     alt='car model' fill priority className='object-contain'
                                                 />
                                             </div>
