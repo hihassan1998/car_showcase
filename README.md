@@ -2,7 +2,8 @@
 # BilHub Carshowcase Application
 desc <>
 ## Visual Overview:
-![bilhub](https://github.com/hihassan1998/car_showcase/assets/150392365/41acfca6-785b-4d66-8543-424c8053a22b)
+![bilhubC](https://github.com/hihassan1998/car_showcase/assets/150392365/902c1c0a-b826-4474-9ef0-a8cb89024ef6)
+
 
 ## Tech Stack:
 * Next.js
@@ -45,7 +46,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Vercel or Render
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
