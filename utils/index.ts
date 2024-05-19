@@ -1,20 +1,24 @@
-import { CarProps } from "@/types";
+import { CarProps, FilterProps } from "@/types";
 import { generateKey } from "crypto";
 
-export async function fetchCars() {
+export async function fetchCars(filters: FilterProps) {
+
+    const {manufacturer, year, model ,fuel, limit} = filters;
+
     const headers = {
         'X-RapidAPI-Key': '82e0dce41emsh34e0d22e81aed3dp1cfebcjsndd8fc680f66b',
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
 
-    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera', {
+    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`
+    , {
         headers: headers,
     });
 
-    const result = await response.json();
+const result = await response.json();
 
-    return result;
+return result;
 }
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
@@ -34,16 +38,16 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
 
 export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+    const url = new URL("https://cdn.imagin.studio/getimage");
+    const { make, model, year } = car;
 
-    const url = new URL('https://cdn.imagin.studio/getimage');
-
-    const { make, year, model } = car;
-    url.searchParams.append('customer', 'hrjavascript-mastery')
+    url.searchParams.append('customer', process.env.NEXT_PUBLIC_IMAGIN_API_KEY || '');
     url.searchParams.append('make', make);
-    url.searchParams.append('modelFamily', model.split(' ')[0]);
+    url.searchParams.append('modelFamily', model.split(" ")[0]);
     url.searchParams.append('zoomType', 'fullscreen');
-    url.searchParams.append('modelYear', `$(year)`);
-    url.searchParams.append('angle', `${angle}`);
+    url.searchParams.append('modelYear', `${year}`);
+    // url.searchParams.append('zoomLevel', zoomLevel);
+    angle && url.searchParams.append('angle', `${angle}`);
 
     return `${url}`;
 }

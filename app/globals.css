@@ -85,10 +85,21 @@
   @apply mt-16 flex justify-center items-center flex-col gap-2;
 }
 /* END: Home styles */
-
+.btn-bg-primary-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34, 197, 94 / var(--tw-bg-opacity))  ; /* Adjust the RGB value as needed */
+}
+.btn-bg-primary-green-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34, 197, 94 / var(--tw-bg-opacity))  ;
+}
+.btn-text-primary-green-100{
+  --tw-text-opacity: 1;
+  color: rgb(10, 120, 50 / var(--tw-text-opacity)) ;
+}
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-green-100 hover:bg-white hover:shadow-md rounded-3xl;
 }
 
 .car-card__content {
@@ -138,7 +149,7 @@
 }
 
 .car-details__close-btn {
-  @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full;
+  @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-green-100 rounded-full;
 }
 
 .car-details__main-image {
@@ -217,3 +228,32 @@
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search manufacturer styles */
+
+.tooltip-container {
+  /*START: Search tips  */
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(91, 196, 117);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Adjust as needed */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+/*END: Search tips  */
