@@ -27,9 +27,9 @@ const CarCard = ({ car }: CarCardProps) => {
       </div>
 
       <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold'>
-        <span className='self-start text-[14px] leading-[17px] font-semibold'>$</span>
+        <span className='self-start text-[14px] leading-[17px] font-semibold'>Sek</span>
         {carRent}
-        <span className='self-end text-[14px] leading-[17px] font-medium'>/day</span>
+        <span className='self-end text-[14px] leading-[17px] font-medium'>/dag</span>
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
@@ -56,7 +56,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
         <div className="car-card__btn-container">
           <CustomButton
-            title='View More'
+            title='Visa Mer'
             containerStyles='w-full py-[16px] rounded-full bg-primary-green'
             textStyles='text-white text-[14px] leading-[17px] font-bold'
             rightIcon='/right-arrow.svg'
