@@ -38,8 +38,8 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
 
 export const generateCarImageUrl = (car: CarProps, angle?: string) => {
-    // const url = new URL("https://cdn.imagin.studio/getimage");
-    const url = new URL("https://i.ibb.co/4ZjRWRb/hero.png");
+    const url = new URL("https://cdn.imagin.studio/getimage");
+    // const url = new URL("https://i.ibb.co/4ZjRWRb/hero.png");
     const { make, model, year } = car;
 
     url.searchParams.append('customer', process.env.NEXT_PUBLIC_IMAGIN_API_KEY || '');
